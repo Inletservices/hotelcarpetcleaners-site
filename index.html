@@ -20,9 +20,9 @@
       --soft:#f4f7fb;
       --line:#d9e2ec;
       --green:#2e9b4f;
-      --yellow:#ecbf39;
+      --yellow:#d9a72f;
       --red:#c84b4b;
-      --clear:#9fd3ef;
+      --clear:#75b9db;
       --shadow:0 16px 40px rgba(21,38,57,.10);
       --radius:22px;
       --max:1220px;
@@ -41,7 +41,6 @@
     a{text-decoration:none;color:inherit}
     .container{width:min(calc(100% - 2rem), var(--max)); margin:0 auto;}
 
-    /* Mimic Inlet Carpet Care header spirit */
     .top-strip{
       background:var(--surface);
       border-bottom:1px solid #e7edf4;
@@ -132,9 +131,7 @@
       box-shadow:var(--shadow);
       flex:0 0 auto;
     }
-    .brand-copy{
-      min-width:0;
-    }
+    .brand-copy{min-width:0;}
     .brand-copy strong{
       display:block;
       font-size:1rem;
@@ -149,7 +146,6 @@
       overflow:hidden;
       text-overflow:ellipsis;
     }
-
     .nav-links{
       display:flex;
       align-items:center;
@@ -175,7 +171,7 @@
       position:relative;
       overflow:hidden;
       background:
-        linear-gradient(90deg, rgba(33,59,97,.88), rgba(81,130,184,.70)),
+        linear-gradient(90deg, rgba(33,59,97,.88), rgba(81,130,184,.72)),
         url('/images/hotels/hotel-hero-placeholder.jpg') center/cover no-repeat;
       color:#fff;
     }
@@ -251,6 +247,10 @@
       color:#fff;
       border:1px solid rgba(255,255,255,.22);
     }
+    .btn-blue{
+      background:var(--icc-blue);
+      color:#fff;
+    }
 
     .hero-card{
       background:rgba(255,255,255,.1);
@@ -270,11 +270,7 @@
       color:rgba(255,255,255,.88);
     }
 
-    /* Dial */
-    .score-panel{
-      display:grid;
-      gap:1rem;
-    }
+    .score-panel{display:grid;gap:1rem;}
     .gauge-wrap{
       background:rgba(255,255,255,.08);
       border-radius:18px;
@@ -362,12 +358,13 @@
     }
     .section-head p{margin:0;color:var(--icc-gray)}
 
-    .grid-2,.grid-3{
+    .grid-2,.grid-3,.grid-4{
       display:grid;
       gap:1.3rem;
     }
     .grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
     .grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .grid-4{grid-template-columns:repeat(4,minmax(0,1fr))}
     .card{
       background:#fff;
       border:1px solid var(--line);
@@ -390,7 +387,6 @@
       border-top:1px solid #e8eef5;
       border-bottom:1px solid #e8eef5;
     }
-
     .mimic-note{
       background:#fff7df;
       border:1px solid #f1dd95;
@@ -400,11 +396,29 @@
       margin-bottom:1.4rem;
       font-size:.95rem;
     }
-
-    .score-cards .card{
-      position:relative;
-      overflow:hidden;
+    .success-line{
+      display:inline-block;
+      margin:0 0 .7rem;
+      padding:.45rem .85rem;
+      border-radius:999px;
+      background:rgba(46,155,79,.12);
+      color:var(--green);
+      font-size:.88rem;
+      font-weight:800;
+      text-transform:uppercase;
+      letter-spacing:.06em;
     }
+    .score-proof-image{margin-top:1.25rem;}
+    .score-proof-image img{
+      width:100%;
+      max-width:920px;
+      margin:0 auto;
+      border-radius:18px;
+      border:1px solid var(--line);
+      box-shadow:var(--shadow);
+      background:#fff;
+    }
+
     .score-cards .status{
       display:inline-flex;
       align-items:center;
@@ -424,83 +438,6 @@
       width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.9)
     }
 
-    .quote-band{
-      background:linear-gradient(135deg, var(--icc-blue), #385f8c);
-      color:#fff;
-      border-radius:28px;
-      padding:2rem;
-      box-shadow:var(--shadow);
-    }
-    .quote-band h2{color:#fff}
-    .quote-band p{color:rgba(255,255,255,.9)}
-    .footer{
-      background:#222;
-      color:#fff;
-      padding:2rem 0;
-      margin-top:4rem;
-    }
-    .footer .inner{
-      display:flex;
-      justify-content:space-between;
-      gap:1rem;
-      flex-wrap:wrap;
-      align-items:center;
-    }
-
-    @media (max-width:1040px){
-      .top-strip .inner,
-      .hero .inner,
-      .grid-2,
-      .grid-3{
-        grid-template-columns:1fr;
-      }
-      .main-nav .inner{
-        flex-direction:column;
-        align-items:flex-start;
-        padding:.9rem 0;
-      }
-      .nav-links{gap:.8rem}
-      .hero h1{max-width:none}
-      .gauge{width:220px;height:110px}
-      .needle{height:78px}
-    }
-
-    @media (max-width:720px){
-      .top-strip .inner{padding:.8rem 0}
-      .top-strip .inner > *{text-align:center}
-      .review-pill{justify-content:center}
-      .brand-copy strong,.brand-copy span{white-space:normal}
-      .nav-links a{font-size:.74rem}
-      .hero .inner{padding:3.3rem 0}
-      main section{padding:4rem 0}
-    }
-
-    .score-proof-image{
-      margin-top: 1.25rem;
-    }
-    .score-proof-image img{
-      width: 100%;
-      max-width: 920px;
-      margin: 0 auto;
-      border-radius: 18px;
-      border: 1px solid var(--line);
-      box-shadow: var(--shadow);
-      background: #fff;
-    }
-    .success-line{
-      display:inline-block;
-      margin: 0 0 .7rem;
-      padding: .45rem .85rem;
-      border-radius: 999px;
-      background: rgba(46,155,79,.12);
-      color: var(--green);
-      font-size: .88rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: .06em;
-    }
-
-
     .room-spotlight{
       display:grid;
       grid-template-columns: 1.15fr .85fr;
@@ -517,7 +454,7 @@
     .room-image-card img{
       width:100%;
       display:block;
-      aspect-ratio: 16 / 10;
+      aspect-ratio:16 / 10;
       object-fit:cover;
     }
     .room-image-caption{
@@ -543,9 +480,6 @@
       font-weight:800;
       text-transform:uppercase;
       letter-spacing:.03em;
-    }
-    .room-services-card h3{
-      margin-bottom:.6rem;
     }
     .room-services-card .mini-head{
       display:inline-block;
@@ -590,13 +524,109 @@
       font-size:.95rem;
     }
 
-    @media (max-width:1040px){
-      .room-spotlight,
-      .room-service-grid{
-        grid-template-columns:1fr;
-      }
+    .video-card{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:24px;
+      padding:1rem;
+      box-shadow:var(--shadow);
+    }
+    .video-wrap{
+      position:relative;
+      width:100%;
+      max-width:900px;
+      margin:0 auto;
+      aspect-ratio:16 / 9;
+      overflow:hidden;
+      border-radius:18px;
+      background:#000;
+    }
+    .video-wrap iframe{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      border:0;
+    }
+    .video-overlay-copy{
+      margin-top:1rem;
+      display:grid;
+      grid-template-columns:1fr auto;
+      gap:1rem;
+      align-items:center;
+    }
+    .video-outcome-tags{
+      display:flex;
+      flex-wrap:wrap;
+      gap:.55rem;
+      margin-top:.75rem;
+    }
+    .video-outcome-tags span{
+      padding:.42rem .68rem;
+      border-radius:999px;
+      background:#eef4fb;
+      border:1px solid #d8e4f0;
+      color:var(--icc-blue);
+      font-size:.8rem;
+      font-weight:800;
+      text-transform:uppercase;
     }
 
+    .quote-band{
+      background:linear-gradient(135deg, var(--icc-blue), #385f8c);
+      color:#fff;
+      border-radius:28px;
+      padding:2rem;
+      box-shadow:var(--shadow);
+    }
+    .quote-band h2{color:#fff}
+    .quote-band p{color:rgba(255,255,255,.9)}
+
+    .footer{
+      background:#222;
+      color:#fff;
+      padding:2rem 0;
+      margin-top:4rem;
+    }
+    .footer .inner{
+      display:flex;
+      justify-content:space-between;
+      gap:1rem;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+
+    @media (max-width:1040px){
+      .top-strip .inner,
+      .hero .inner,
+      .grid-2,
+      .grid-3,
+      .grid-4,
+      .room-spotlight,
+      .room-service-grid,
+      .video-overlay-copy{
+        grid-template-columns:1fr;
+      }
+      .main-nav .inner{
+        flex-direction:column;
+        align-items:flex-start;
+        padding:.9rem 0;
+      }
+      .nav-links{gap:.8rem}
+      .hero h1{max-width:none}
+      .gauge{width:220px;height:110px}
+      .needle{height:78px}
+    }
+
+    @media (max-width:720px){
+      .top-strip .inner{padding:.8rem 0}
+      .top-strip .inner > *{text-align:center}
+      .review-pill{justify-content:center}
+      .brand-copy strong,.brand-copy span{white-space:normal}
+      .nav-links a{font-size:.74rem}
+      .hero .inner{padding:3.3rem 0}
+      main section{padding:4rem 0}
+    }
   </style>
 </head>
 <body>
@@ -605,7 +635,7 @@
     <div class="container inner">
       <div class="review-pill">
         <div class="stars">★★★★★</div>
-        <div>Hotel-ready service mindset inspired by the same strong, conversion-focused header structure you use on Inlet Carpet Care. fileciteturn1file0</div>
+        <div>Hotel-ready service mindset with former hotel operations leadership and a strong focus on guest experience.</div>
       </div>
 
       <div class="call-box">
@@ -628,16 +658,16 @@
         <div class="brand-mark">H</div>
         <div class="brand-copy">
           <strong>HotelCarpetCleaners.com</strong>
-          <span>Hotel landing page concept aligned with the Inlet Carpet Care look and feel</span>
+          <span>Hotel landing page concept aligned with the Inlet Carpet Care feel</span>
         </div>
       </a>
 
       <nav class="nav-links" aria-label="Primary">
         <a href="#why">Why Hotels</a>
+        <a href="#score-proof">Green Zone</a>
+        <a href="#room-breakdown">Guest Rooms</a>
+        <a href="#ptac-video">PTAC Video</a>
         <a href="#services">Services</a>
-        <a href="#score">Score Support</a>
-        <a href="#training">Training</a>
-        <a href="#program">PM Program</a>
         <a class="quote" href="#contact">Get a Quote</a>
       </nav>
     </div>
@@ -680,14 +710,13 @@
               <span>Green</span>
             </div>
             <div class="gauge-copy">
-              We can use this visual language throughout the page to connect your services to how hotel brands think about performance.
+              We help move visible cleanliness, odor control, room readiness, and maintenance-related issues closer to green.
             </div>
           </div>
 
           <p>
-            You asked for more of the Inlet Carpet Care header feel, plus red/yellow/green and clear scoring language.
-            I worked that into the hero so you can see it right away. The ICC header you pasted uses a top call bar,
-            phone emphasis, and a blue/gold navigation style, which is what I mirrored here. fileciteturn1file0 fileciteturn1file4
+            We are not just cleaning for appearance. We are helping support the guest experience, brand standards,
+            and the operational side of the hotel at the same time.
           </p>
         </div>
       </aside>
@@ -695,6 +724,45 @@
   </section>
 
   <main>
+    <section id="why">
+      <div class="container">
+        <div class="mimic-note">
+          This version keeps the stronger blue-and-gold feel, visible phone/assessment CTA, and hotel-specific messaging while staying cleaner and more modern.
+        </div>
+
+        <div class="section-head">
+          <span class="section-label">Why hotels choose you</span>
+          <h2>An extension of your hotel team</h2>
+          <p>
+            This page is written for hotel owners, general managers, chief engineers, executive housekeepers,
+            and regional leaders who care about guest experience, brand standards, room availability, and asset life.
+          </p>
+        </div>
+
+        <div class="grid-2">
+          <div class="card">
+            <h3>Led by hotel operators</h3>
+            <ul>
+              <li>20+ years in hotel operations</li>
+              <li>Former General Manager</li>
+              <li>Former Executive Housekeeper</li>
+              <li>Former Senior Vice President of Operations</li>
+              <li>Real experience with Marriott, Hilton, Hyatt, IHG, Starwood, and more</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>What that means for your clients</h3>
+            <ul>
+              <li>You understand occupancy pressure and sold-out nights</li>
+              <li>You understand guest satisfaction scores and service recovery</li>
+              <li>You understand QA, brand standards, and inspection readiness</li>
+              <li>You understand the urgency of reducing out-of-order room time</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section id="score-proof">
       <div class="container">
@@ -703,8 +771,8 @@
           <div class="success-line">This is what success looks like</div>
           <h2>Designed to help keep your property in the green</h2>
           <p>
-            We align our services with how hotel brands actually score properties, helping support
-            stronger performance in both Brand and Operations inspections.
+            We align our services with how hotel brands actually score properties, helping support stronger
+            performance in both Brand and Operations inspections.
           </p>
         </div>
 
@@ -743,57 +811,15 @@
       </div>
     </section>
 
-    <section id="why">
-      <div class="container">
-        <div class="mimic-note">
-          This version is intentionally closer to the Inlet Carpet Care vibe: blue-and-gold header styling, strong phone/estimate emphasis, and a more familiar visual rhythm based on the header/menu structure in the code you pasted. fileciteturn1file0 fileciteturn1file4
-        </div>
-
-        <div class="section-head">
-          <span class="section-label">Why hotels choose you</span>
-          <h2>An extension of your hotel team</h2>
-          <p>
-            This is not generic commercial cleaning copy. It is written for hotel owners, general managers,
-            chief engineers, executive housekeepers, and regional leaders who care about guest experience,
-            brand standards, room availability, and asset life.
-          </p>
-        </div>
-
-        <div class="grid-2">
-          <div class="card">
-            <h3>Led by hotel operators</h3>
-            <ul>
-              <li>20+ years in hotel operations</li>
-              <li>Former General Manager</li>
-              <li>Former Executive Housekeeper</li>
-              <li>Former Senior Vice President of Operations</li>
-              <li>Real experience with Marriott, Hilton, Hyatt, IHG, Starwood, and more</li>
-            </ul>
-          </div>
-
-          <div class="card">
-            <h3>What that means for your clients</h3>
-            <ul>
-              <li>You understand occupancy pressure and sold-out nights</li>
-              <li>You understand guest satisfaction scores and service recovery</li>
-              <li>You understand QA, brand standards, and inspection readiness</li>
-              <li>You understand the urgency of reducing out-of-order room time</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
     <section id="room-breakdown" class="band">
       <div class="container">
         <div class="section-head">
           <span class="section-label">One room, multiple services</span>
           <h2>A typical hotel guest room shows how many problems you solve</h2>
           <p>
-            This is a smart kind of hotel image to use because it visually supports several of your services at once.
-            Instead of just being a generic room photo, it reinforces carpet cleaning, upholstery cleaning, PTAC cleaning,
-            drapery-related soil awareness, odor control, and room-turn support.
+            This kind of room image visually supports several of your services at once. Instead of being generic,
+            it reinforces carpet cleaning, upholstery cleaning, PTAC cleaning, drapery-related soil awareness,
+            odor control, and room-turn support.
           </p>
         </div>
 
@@ -850,22 +876,64 @@
             </div>
 
             <div class="seo-note">
-              <strong>Best practice:</strong> place this image near your hotel services or guest-room section and give it hotel-specific alt text.
-              That helps the page feel more relevant to hotel decision-makers while also improving the quality of the content overall.
+              <strong>Best practice:</strong> place images like this near guest-room or PTAC messaging and keep the alt text hotel-specific.
             </div>
           </div>
         </div>
       </div>
     </section>
 
+    <section id="ptac-video">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-label">PTAC cleaning in action</span>
+          <h2>See why clean PTACs matter</h2>
+          <p>
+            PTAC units are one of the biggest drivers of guest room odor complaints. This video shows the kind of detailed
+            cleaning that supports a fresher room, better guest perception, and stronger room performance.
+          </p>
+        </div>
+
+        <div class="video-card">
+          <div class="video-wrap">
+            <iframe
+              src="https://www.youtube.com/embed/V3oIqZBoxVk"
+              title="PTAC cleaning video"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+
+          <div class="video-overlay-copy">
+            <div>
+              <h3 style="margin-bottom:.35rem;">This is what clean air smells like</h3>
+              <p style="margin:0;">
+                Use the video as proof, not filler. It helps connect PTAC cleaning to odor control, guest comfort, maintenance support,
+                and fewer complaints that show up in reviews or guest feedback.
+              </p>
+              <div class="video-outcome-tags">
+                <span>Odor Control</span>
+                <span>Guest Comfort</span>
+                <span>PTAC Performance</span>
+                <span>Room Readiness</span>
+              </div>
+            </div>
+            <div>
+              <a class="btn btn-blue" href="#contact">Schedule PTAC Assessment</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section id="services" class="band">
       <div class="container">
         <div class="section-head">
           <span class="section-label">Hotel-specific services</span>
-          <h2>Everything on this page should feel like it was built for hotels</h2>
+          <h2>Cleaning, restoration, and support services built for hotel operations</h2>
           <p>
-            From guest rooms to engineering spaces to public areas, the service list is organized around the way hotels actually operate.
+            From guest rooms to engineering spaces to public areas, we help hotels stay cleaner, safer, more guest-ready, and more efficient.
           </p>
         </div>
 
@@ -1000,7 +1068,7 @@
           <span class="section-label">Training that helps hotels</span>
           <h2>Water damage readiness and hospitality-driven service training</h2>
           <p>
-            You wanted the page to show that your team helps boost guest scores simply by how they behave on property. This section is built to sell that. 
+            Your team should help boost guest scores simply by how they behave on property. This section is built to sell that.
           </p>
         </div>
 
@@ -1070,13 +1138,15 @@
             <span class="section-label" style="color:#dceaf8;">Final CTA</span>
             <h2>Let’s walk your property</h2>
             <p>
-              This version is a better visual bridge between the hotel page and InletCarpetCare.com. Your pasted code shows a blue menu bar, white text navigation, a strong phone callout, and a free-estimate button in the header, which is exactly the feel I carried over here. fileciteturn1file0 fileciteturn1file4
+              Whether you need a one-time project, emergency support, PTAC cleaning, guest room work,
+              or a preventive maintenance program, we would love to learn more about your property.
             </p>
           </div>
 
           <div class="actions">
             <a class="btn btn-primary" href="tel:7572192839">Call 757-219-2839</a>
             <a class="btn btn-secondary" href="mailto:tony@inletservices.com">Email Tony</a>
+            <a class="btn btn-secondary" href="#why">View Services</a>
           </div>
         </div>
       </div>
@@ -1086,7 +1156,7 @@
   <footer class="footer">
     <div class="container inner">
       <div><strong>HotelCarpetCleaners.com</strong> — hotel landing page concept</div>
-      <div>Built to visually echo the current Inlet Carpet Care header/menu structure you shared. fileciteturn1file0</div>
+      <div>Built to sell guest experience, PTAC cleaning, room readiness, and brand-standard performance.</div>
     </div>
   </footer>
 </body>

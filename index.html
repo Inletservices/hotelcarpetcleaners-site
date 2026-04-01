@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hotel Carpet & More Care | HotelCarpetCleaners.com</title>
+  <title>Hotel Carpet & Facility Care | HotelCarpetCleaners.com</title>
   <meta
     name="description"
     content="Hotel-focused carpet cleaning, PTAC cleaning, tile and grout cleaning, water damage restoration, VCT care, hotel upholstery cleaning, and hospitality-driven service training."
@@ -500,6 +500,103 @@
       letter-spacing: .06em;
     }
 
+
+    .room-spotlight{
+      display:grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap:1.4rem;
+      align-items:stretch;
+    }
+    .room-image-card{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:24px;
+      overflow:hidden;
+      box-shadow:var(--shadow);
+    }
+    .room-image-card img{
+      width:100%;
+      display:block;
+      aspect-ratio: 16 / 10;
+      object-fit:cover;
+    }
+    .room-image-caption{
+      padding:1rem 1.15rem 1.1rem;
+      color:var(--icc-gray);
+      font-size:.95rem;
+    }
+    .component-tags{
+      display:flex;
+      flex-wrap:wrap;
+      gap:.6rem;
+      margin:.9rem 0 0;
+    }
+    .component-tags span{
+      display:inline-flex;
+      align-items:center;
+      padding:.45rem .7rem;
+      border-radius:999px;
+      background:#eef4fb;
+      border:1px solid #d8e4f0;
+      color:var(--icc-blue);
+      font-size:.82rem;
+      font-weight:800;
+      text-transform:uppercase;
+      letter-spacing:.03em;
+    }
+    .room-services-card h3{
+      margin-bottom:.6rem;
+    }
+    .room-services-card .mini-head{
+      display:inline-block;
+      margin:0 0 .6rem;
+      color:var(--icc-light-blue);
+      font-size:.8rem;
+      font-weight:800;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+    }
+    .room-service-grid{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:.75rem;
+      margin-top:1rem;
+    }
+    .room-service-item{
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:.8rem .85rem;
+      background:#fafcff;
+    }
+    .room-service-item strong{
+      display:block;
+      color:var(--icc-dark);
+      margin-bottom:.2rem;
+      font-size:.95rem;
+    }
+    .room-service-item span{
+      display:block;
+      color:var(--icc-gray);
+      font-size:.88rem;
+      line-height:1.45;
+    }
+    .seo-note{
+      margin-top:1rem;
+      padding:1rem 1.05rem;
+      border-radius:16px;
+      background:#fff7df;
+      border:1px solid #f1dd95;
+      color:#5d4d1e;
+      font-size:.95rem;
+    }
+
+    @media (max-width:1040px){
+      .room-spotlight,
+      .room-service-grid{
+        grid-template-columns:1fr;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -550,7 +647,7 @@
     <div class="container inner">
       <div>
         <div class="eyebrow">Built for hotels</div>
-        <h1>Hotel Carpet & More Care Built for Brand Standards</h1>
+        <h1>Hotel Carpet & Facility Care Built for Brand Standards</h1>
         <p class="lead">
           Former hotel operators helping you improve guest scores, support QA and brand standard audits,
           and reduce unnecessary out-of-order rooms.
@@ -686,6 +783,81 @@
         </div>
       </div>
     </section>
+
+
+    <section id="room-breakdown" class="band">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-label">One room, multiple services</span>
+          <h2>A typical hotel guest room shows how many problems you solve</h2>
+          <p>
+            This is a smart kind of hotel image to use because it visually supports several of your services at once.
+            Instead of just being a generic room photo, it reinforces carpet cleaning, upholstery cleaning, PTAC cleaning,
+            drapery-related soil awareness, odor control, and room-turn support.
+          </p>
+        </div>
+
+        <div class="room-spotlight">
+          <div class="room-image-card">
+            <img src="/images/hotels/courtyard-room-example.jpg" alt="Typical Courtyard-style hotel guest room with carpet, upholstered seating, PTAC unit, drapes, hard surfaces, and multiple guest touchpoints" />
+            <div class="room-image-caption">
+              Use a room photo like this as a proof-of-understanding image, not just decoration. It instantly tells a GM,
+              executive housekeeper, or chief engineer that you understand the full guest room environment.
+              <div class="component-tags">
+                <span>Carpet</span>
+                <span>PTAC</span>
+                <span>Upholstery</span>
+                <span>Drapes</span>
+                <span>Hard Surfaces</span>
+                <span>Guest Room Turn</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card room-services-card">
+            <span class="mini-head">How to sell the image</span>
+            <h3>Turn one photo into multiple service messages</h3>
+            <p>
+              This lets the picture work harder for you. Instead of saying only “hotel carpet cleaning,” the image quietly supports
+              a broader hotel-services story.
+            </p>
+
+            <div class="room-service-grid">
+              <div class="room-service-item">
+                <strong>Carpet cleaning</strong>
+                <span>Guest room carpet appearance directly affects guest perception and cleanliness scores.</span>
+              </div>
+              <div class="room-service-item">
+                <strong>PTAC cleaning</strong>
+                <span>The visible PTAC helps connect the room to odor control, efficiency, and maintenance support.</span>
+              </div>
+              <div class="room-service-item">
+                <strong>Upholstery cleaning</strong>
+                <span>Chair and sofa seating show that you do more than floors in guest-facing spaces.</span>
+              </div>
+              <div class="room-service-item">
+                <strong>Drapes & dust load</strong>
+                <span>Drapery and fabric surfaces help tell the indoor air quality and guest freshness story.</span>
+              </div>
+              <div class="room-service-item">
+                <strong>Odor control</strong>
+                <span>Rooms like this are where musty smells, pet issues, and guest incidents affect reviews fast.</span>
+              </div>
+              <div class="room-service-item">
+                <strong>Room-ready support</strong>
+                <span>It reinforces your ability to help keep rooms guest-ready and return them faster after issues.</span>
+              </div>
+            </div>
+
+            <div class="seo-note">
+              <strong>Best practice:</strong> place this image near your hotel services or guest-room section and give it hotel-specific alt text.
+              That helps the page feel more relevant to hotel decision-makers while also improving the quality of the content overall.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
 
     <section id="services" class="band">
       <div class="container">

@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hotel Carpet Care & More  | HotelCarpetCleaners.com</title>
+  <title>Hotel Carpet Care & More</title>
   <meta
     name="description"
     content="Hotel-focused carpet cleaning, PTAC cleaning, tile and grout cleaning, water damage restoration, VCT care, hotel upholstery cleaning, and hospitality-driven service training."
@@ -38,6 +37,7 @@
       background:#f7f9fc;
       line-height:1.6;
     }
+
     img{max-width:100%;display:block}
     a{text-decoration:none;color:inherit}
     .container{width:min(calc(100% - 2rem), var(--max)); margin:0 auto;}
@@ -261,11 +261,6 @@
       box-shadow:var(--shadow);
       backdrop-filter:blur(9px);
     }
-    .hero-card h2{
-      color:#fff;
-      font-size:1.3rem;
-      margin-bottom:.6rem;
-    }
     .hero-card p{
       margin:.35rem 0 1rem;
       color:rgba(255,255,255,.88);
@@ -276,6 +271,7 @@
       background:rgba(255,255,255,.08);
       border-radius:18px;
       padding:1rem;
+      text-align:center;
     }
     .gauge-title{
       font-size:.95rem;
@@ -283,58 +279,18 @@
       margin-bottom:.6rem;
       color:#fff;
     }
-    .gauge{
-      position:relative;
-      width:260px;
-      height:130px;
-      margin:0 auto;
-      overflow:hidden;
-    }
-    .gauge-arc{
-      position:absolute;
-      inset:0;
-      border-radius:260px 260px 0 0;
-      background:conic-gradient(from 180deg, var(--red) 0 58deg, var(--yellow) 58deg 118deg, var(--clear) 118deg 145deg, var(--green) 145deg 180deg);
-      -webkit-mask:radial-gradient(circle at 50% 100%, transparent 0 57px, #000 58px);
-              mask:radial-gradient(circle at 50% 100%, transparent 0 57px, #000 58px);
-    }
-    .needle{
-      position:absolute;
-      left:50%;
-      bottom:0;
-      width:5px;
-      height:92px;
-      background:#fff;
-      border-radius:999px;
-      transform-origin:bottom center;
-      transform:translateX(-50%) rotate(58deg);
-      box-shadow:0 0 10px rgba(255,255,255,.45);
-    }
-    .needle::after{
-      content:"";
-      position:absolute;
-      left:50%;
-      bottom:-8px;
-      width:20px;
-      height:20px;
-      background:#fff;
-      border-radius:50%;
-      transform:translateX(-50%);
-    }
-    .gauge-labels{
-      display:flex;
-      justify-content:space-between;
-      gap:.5rem;
-      font-size:.78rem;
-      font-weight:700;
-      margin-top:.7rem;
-      color:#fff;
-      opacity:.95;
+    .gauge-image{
+      width:100%;
+      max-width:340px;
+      margin:0 auto .8rem;
+      filter:drop-shadow(0 8px 20px rgba(0,0,0,.18));
     }
     .gauge-copy{
       color:rgba(255,255,255,.86);
       font-size:.94rem;
       text-align:center;
+      max-width:42ch;
+      margin:0 auto;
     }
 
     main section{padding:4.75rem 0}
@@ -387,15 +343,6 @@
       background:linear-gradient(180deg, #fff 0%, #f4f8fd 100%);
       border-top:1px solid #e8eef5;
       border-bottom:1px solid #e8eef5;
-    }
-    .mimic-note{
-      background:#fff7df;
-      border:1px solid #f1dd95;
-      border-radius:18px;
-      padding:1rem 1.2rem;
-      color:#5d4d1e;
-      margin-bottom:1.4rem;
-      font-size:.95rem;
     }
     .success-line{
       display:inline-block;
@@ -482,15 +429,6 @@
       text-transform:uppercase;
       letter-spacing:.03em;
     }
-    .room-services-card .mini-head{
-      display:inline-block;
-      margin:0 0 .6rem;
-      color:var(--icc-light-blue);
-      font-size:.8rem;
-      font-weight:800;
-      text-transform:uppercase;
-      letter-spacing:.08em;
-    }
     .room-service-grid{
       display:grid;
       grid-template-columns:repeat(2,minmax(0,1fr));
@@ -514,15 +452,6 @@
       color:var(--icc-gray);
       font-size:.88rem;
       line-height:1.45;
-    }
-    .seo-note{
-      margin-top:1rem;
-      padding:1rem 1.05rem;
-      border-radius:16px;
-      background:#fff7df;
-      border:1px solid #f1dd95;
-      color:#5d4d1e;
-      font-size:.95rem;
     }
 
     .video-card{
@@ -615,8 +544,6 @@
       }
       .nav-links{gap:.8rem}
       .hero h1{max-width:none}
-      .gauge{width:220px;height:110px}
-      .needle{height:78px}
     }
 
     @media (max-width:720px){
@@ -658,7 +585,8 @@
       <a class="brand" href="#">
         <div class="brand-mark">H</div>
         <div class="brand-copy">
-          <strong>HotelCarpetCleaners.com</strong>
+          <strong>Hotel Carpet Care & More</strong>
+          <span>Hotel-focused cleaning, restoration, and support</span>
         </div>
       </a>
 
@@ -699,16 +627,7 @@
         <div class="score-panel">
           <div class="gauge-wrap">
             <div class="gauge-title">Guest score & brand standards mindset</div>
-            <div class="gauge">
-              <div class="gauge-arc"></div>
-              <div class="needle"></div>
-            </div>
-            <div class="gauge-labels">
-              <span>Red</span>
-              <span>Yellow</span>
-              <span>Clear</span>
-              <span>Green</span>
-            </div>
+            <img class="gauge-image" src="/images/hotels/gauge.jpg" alt="Gauge graphic with red, yellow, clear, and green sections with the needle pointing into green" />
             <div class="gauge-copy">
               We help move visible cleanliness, odor control, room readiness, and maintenance-related issues closer to green.
             </div>
@@ -724,37 +643,43 @@
   </section>
 
   <main>
-<section id="why">
-  <div class="container">
-    <div class="section-head">
-      <span class="section-label">Why hotels choose you</span>
-      <h2>An extension of your hotel team</h2>
-       </div>
+    <section id="why">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-label">Why hotels choose you</span>
+          <h2>An extension of your hotel team</h2>
+          <p>
+            This page is built for hotel owners, general managers, chief engineers, executive housekeepers,
+            and regional leaders who care about guest experience, room availability, brand standards, and asset life.
+          </p>
+        </div>
 
-    <div class="grid-2">
-      <div class="card">
-        <h3>Led by hotel operators</h3>
-        <ul>
-          <li>20+ years in hotel operations</li>
-          <li>Former General Manager</li>
-          <li>Former Executive Housekeeper</li>
-          <li>Former Senior Vice President of Operations</li>
-          <li>Real experience with Marriott, Hilton, Hyatt, IHG, Starwood, and more</li>
-        </ul>
-      </div>
+        <div class="grid-2">
+          <div class="card">
+            <h3>Led by hotel operators</h3>
+            <ul>
+              <li>20+ years in hotel operations</li>
+              <li>Former General Manager</li>
+              <li>Former Executive Housekeeper</li>
+              <li>Former Senior Vice President of Operations</li>
+              <li>Real experience with Marriott, Hilton, Hyatt, IHG, Starwood, and more</li>
+            </ul>
+          </div>
 
-      <div class="card">
-        <h3>What that means for your clients</h3>
-        <ul>
-          <li>You understand occupancy pressure and sold-out nights</li>
-          <li>You understand guest satisfaction scores and service recovery</li>
-          <li>You understand QA, brand standards, and inspection readiness</li>
-          <li>You understand the urgency of reducing out-of-order room time</li>
-        </ul>
+          <div class="card">
+            <h3>What that means for your clients</h3>
+            <ul>
+              <li>You understand occupancy pressure and sold-out nights</li>
+              <li>You understand guest satisfaction scores and service recovery</li>
+              <li>You understand QA, brand standards, and inspection readiness</li>
+              <li>You understand the urgency of reducing out-of-order room time</li>
+            </ul>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-       <section id="score-proof">
+    </section>
+
+    <section id="score-proof">
       <div class="container">
         <div class="section-head">
           <span class="section-label">Brand standard mindset</span>
@@ -806,8 +731,13 @@
         <div class="section-head">
           <span class="section-label">One room, multiple services</span>
           <h2>A typical hotel guest room shows how many problems you solve</h2>
-            </div>
-<div class="room-spotlight">
+          <p>
+            A room photo like this does more than decorate the page. It helps show that you understand
+            the full guest room environment and the multiple services tied to it.
+          </p>
+        </div>
+
+        <div class="room-spotlight">
           <div class="room-image-card">
             <img src="/images/hotels/courtyard-room-example.jpg" alt="Typical Courtyard-style hotel guest room with carpet, upholstered seating, PTAC unit, drapes, hard surfaces, and multiple guest touchpoints" />
             <div class="room-image-caption">
@@ -825,13 +755,6 @@
           </div>
 
           <div class="card room-services-card">
-            <span class="mini-head">How to sell the image</span>
-            <h3>Turn one photo into multiple service messages</h3>
-            <p>
-              This lets the picture work harder for you. Instead of saying only “hotel carpet cleaning,” the image quietly supports
-              a broader hotel-services story.
-            </p>
-
             <div class="room-service-grid">
               <div class="room-service-item">
                 <strong>Carpet cleaning</strong>
@@ -857,10 +780,6 @@
                 <strong>Room-ready support</strong>
                 <span>It reinforces your ability to help keep rooms guest-ready and return them faster after issues.</span>
               </div>
-            </div>
-
-            <div class="seo-note">
-              <strong>Best practice:</strong> place images like this near guest-room or PTAC messaging and keep the alt text hotel-specific.
             </div>
           </div>
         </div>
@@ -993,7 +912,7 @@
         <div class="section-head">
           <span class="section-label">Guest score visual language</span>
           <h2>Use red, yellow, clear, and green to frame hotel pain points</h2>
-         </div>
+        </div>
 
         <div class="grid-2 score-cards">
           <div class="card">
@@ -1043,13 +962,57 @@
       </div>
     </section>
 
+    <section id="water-mit-video" class="band">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-label">Emergency water response</span>
+          <h2>See how fast response helps reduce hotel downtime</h2>
+          <p>
+            Water damage in a hotel is not just a maintenance issue. It affects revenue, room availability,
+            guest experience, and operational flow. This video shows a real hotel drying setup designed to
+            help bring affected spaces back into service faster.
+          </p>
+        </div>
+
+        <div class="video-card">
+          <div class="video-wrap">
+            <iframe
+              src="https://www.youtube.com/embed/gBxGV4yxVaA"
+              title="Hotel water mitigation video"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+
+          <div class="video-overlay-copy">
+            <div>
+              <h3 style="margin-bottom:.35rem;">Emergency response that protects revenue</h3>
+              <p style="margin:0;">
+                This video helps show hotel owners, general managers, and engineers what fast, organized
+                drying response looks like when out-of-order time matters.
+              </p>
+              <div class="video-outcome-tags">
+                <span>Less Downtime</span>
+                <span>Faster Drying</span>
+                <span>Revenue Protection</span>
+                <span>Hotel Response</span>
+              </div>
+            </div>
+            <div>
+              <a class="btn btn-blue" href="#contact">Schedule Water Mitigation Assessment</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="training" class="band">
       <div class="container">
         <div class="section-head">
           <span class="section-label">Training that helps hotels</span>
           <h2>Water damage readiness and hospitality-driven service training</h2>
-      </div>
-
+        </div>
         <div class="grid-2">
           <div class="card">
             <h3>Water Damage Readiness Training</h3>
@@ -1133,7 +1096,7 @@
 
   <footer class="footer">
     <div class="container inner">
-      <div><strong>HotelCarpetCleaners.com</strong></div>
+      <div><strong>Hotel Carpet Care & More</strong></div>
     </div>
   </footer>
 </body>

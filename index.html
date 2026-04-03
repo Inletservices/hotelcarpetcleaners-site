@@ -572,9 +572,46 @@
       flex-wrap:wrap;
       align-items:center;
     }
+.training-split{
+  display:grid;
+  grid-template-columns: 1.15fr .85fr;
+  gap:2rem;
+  align-items:start;
+  margin-bottom:2rem;
+}
 
+.training-text h2{
+  margin:0;
+}
+
+.training-image{
+  display:flex;
+  justify-content:flex-end;
+}
+
+.training-image img{
+  width:100%;
+  max-width:420px;
+  height:220px;
+  object-fit:cover;
+  object-position:center;
+  border-radius:18px;
+  box-shadow:var(--shadow);
+}
     @media (max-width:1040px){.hero-split{
   grid-template-columns:1fr;
+}
+.training-split{
+  grid-template-columns:1fr;
+}
+
+.training-image{
+  justify-content:flex-start;
+}
+
+.training-image img{
+  max-width:100%;
+  height:auto;
 }
       .top-strip .inner,
       .hero .inner,
@@ -604,27 +641,7 @@
       .hero .inner{padding:3.3rem 0}
       main section{padding:4rem 0}
     }
-   .training-split{
-  display:grid;
-  grid-template-columns: 1.15fr .85fr;
-  gap:2rem;
-  align-items:start;
-  margin-bottom:2rem;
-}
 
-.training-image{
-  display:flex;
-  justify-content:flex-end;
-}
-
-.training-image img{
-  width:100%;
-  max-width:420px;
-  height:220px;
-  object-fit:cover;
-  border-radius:18px;
-  box-shadow:var(--shadow);
-}
   </style>
 </head>
 <body>
@@ -1029,42 +1046,43 @@
       <div class="container">
 <section id="training" class="band">
   <div class="container">
-    <div class="section-head">
-  <span class="section-label">Training that helps hotels</span>
-  <h2>Water damage readiness and hospitality-driven service training</h2>
-</div>
-    <div class="grid-2">       
 
-  <div class="training-image">
-    <img src="/images/hotels/water-damage-training.jpg" alt="Hotel water damage mitigation and drying equipment in guest room">
-  </div>
-
-</div>
-        <div class="grid-2">
-          <div class="card">
-            <h3>Water Damage Readiness Training</h3>
-            <ul>
-              <li>Help maintenance teams respond faster to leaks and overflows</li>
-              <li>Reduce unnecessary out-of-order room time</li>
-              <li>Minimize damage in the first critical minutes</li>
-              <li>Know when to escalate to professional mitigation</li>
-            </ul>
-          </div>
-
-          <div class="card">
-            <h3>Hotel-Level Service Training</h3>
-            <ul>
-              <li>10–5 rule awareness</li>
-              <li>Guests get on the elevator first</li>
-              <li>Smile, greet, stay aware, wear uniforms</li>
-              <li>Service recovery mindset</li>
-              <li>Do Not Disturb signs are treated like laser beams we do not cross without specific permission for that exact room</li>
-            </ul>
-          </div>
-        </div>
+    <div class="training-split">
+      <div class="training-text">
+        <span class="section-label">Training that helps hotels</span>
+        <h2>Water damage readiness and hospitality-driven service training</h2>
       </div>
-    </section>
 
+      <div class="training-image">
+        <img src="/images/hotels/water-damage-training.jpg" alt="Hotel water damage mitigation and drying equipment">
+      </div>
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <h3>Water Damage Readiness Training</h3>
+        <ul>
+          <li>Help maintenance teams respond faster to leaks and overflows</li>
+          <li>Reduce unnecessary out-of-order room time</li>
+          <li>Minimize damage in the first critical minutes</li>
+          <li>Know when to escalate to professional mitigation</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Hotel-Level Service Training</h3>
+        <ul>
+          <li>10–5 rule awareness</li>
+          <li>Guests get on the elevator first</li>
+          <li>Smile, greet, stay aware, wear uniforms</li>
+          <li>Service recovery mindset</li>
+          <li>Do Not Disturb signs are treated like laser beams we do not cross without specific permission for that exact room</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
     <section id="program">
       <div class="container">
         <div class="section-head">

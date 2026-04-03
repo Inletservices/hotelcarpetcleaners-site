@@ -390,6 +390,28 @@
     .status-dot{
       width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.9)
     }
+    .score-proof-split{
+  display:grid;
+  grid-template-columns: 1.15fr .85fr;
+  gap:2rem;
+  align-items:start;
+  margin-bottom:2rem;
+}
+
+.score-proof-side-image{
+  display:flex;
+  justify-content:flex-end;
+}
+
+.score-proof-side-image img{
+  width:100%;
+  max-width:420px;
+  height:220px;
+  object-fit:cover;
+  object-position:center;
+  border-radius:18px;
+  box-shadow:var(--shadow);
+}
 .hero-split{
   display:flex;
   align-items:flex-start; /* key for top alignment */
@@ -582,18 +604,23 @@
       .hero .inner{padding:3.3rem 0}
       main section{padding:4rem 0}
     }
-    .training-split{
+   .training-split{
   display:grid;
-  grid-template-columns: 1.2fr .8fr;
+  grid-template-columns: 1.15fr .85fr;
   gap:2rem;
   align-items:start;
   margin-bottom:2rem;
 }
 
+.training-image{
+  display:flex;
+  justify-content:flex-end;
+}
+
 .training-image img{
   width:100%;
-  height:100%;
-  max-height:260px;
+  max-width:420px;
+  height:220px;
   object-fit:cover;
   border-radius:18px;
   box-shadow:var(--shadow);
@@ -721,16 +748,21 @@
 </section>  
     <section id="score-proof">
       <div class="container">
-        <div class="section-head">
-          <span class="section-label">Brand standard mindset</span>
-          <div class="success-line">This is what success looks like</div>
-          <h2>Designed to help keep your property in the green</h2>
-          <p>
-            We align our services with how hotel brands actually score properties, helping support stronger
-            performance in both Brand and Operations inspections.
-          </p>
-        </div>
+        <div class="score-proof-split">
+  <div class="section-head">
+    <span class="section-label">Brand standard mindset</span>
+    <div class="success-line">This is what success looks like</div>
+    <h2>Designed to help keep your property in the green</h2>
+    <p>
+      We align our services with how hotel brands actually score properties, helping support stronger
+      performance in both Brand and Operations inspections.
+    </p>
+  </div>
 
+  <div class="score-proof-side-image">
+    <img src="/images/hotels/happy-hotel-guests.jpg" alt="Happy hotel guests in a hotel lobby">
+  </div>
+</div>
         <div class="card">
           <div class="score-proof-image">
             <img src="/images/hotels/green-bsa-hotel-score.jpg" alt="Hotel BSA performance classification example showing green status in both brand and operations" />
@@ -995,12 +1027,13 @@
     </section>
         <section id="training" class="band">
       <div class="container">
-        <div class="training-split">
-  
-  <div class="training-text">
-    <span class="section-label">Training that helps hotels</span>
-    <h2>Water damage readiness and hospitality-driven service training</h2>
-  </div>
+<section id="training" class="band">
+  <div class="container">
+    <div class="section-head">
+  <span class="section-label">Training that helps hotels</span>
+  <h2>Water damage readiness and hospitality-driven service training</h2>
+</div>
+    <div class="grid-2">       
 
   <div class="training-image">
     <img src="/images/hotels/water-damage-training.jpg" alt="Hotel water damage mitigation and drying equipment in guest room">

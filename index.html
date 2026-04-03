@@ -390,6 +390,28 @@
     .status-dot{
       width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.9)
     }
+    .program-split{
+  display:grid;
+  grid-template-columns: 1.15fr .85fr;
+  gap:2rem;
+  align-items:center;
+  margin-bottom:2rem;
+}
+
+.program-image{
+  display:flex;
+  justify-content:flex-end;
+}
+
+.program-image img{
+  width:100%;
+  max-width:420px;
+  height:220px;
+  object-fit:cover;
+  object-position:center;
+  border-radius:18px;
+  box-shadow:var(--shadow);
+}
     .score-proof-split{
   display:grid;
   grid-template-columns: 1.15fr .85fr;
@@ -667,7 +689,18 @@
 .services-split{
   grid-template-columns:1fr;
 }
+.program-split{
+  grid-template-columns:1fr;
+}
 
+.program-image{
+  justify-content:flex-start;
+}
+
+.program-image img{
+  max-width:100%;
+  height:auto;
+}
 .services-image{
   justify-content:flex-start;
   margin-top:12px;
@@ -1174,13 +1207,19 @@
 </section>
     <section id="program">
       <div class="container">
-        <div class="section-head">
-          <span class="section-label">Recurring revenue / hotel value</span>
-          <h2>Hotel Flooring Preventive Maintenance Program</h2>
-          <p>
-            A monthly or scheduled program designed around occupancy, budgets, and brand standards so the hotel stays cleaner and more consistent year-round.
-          </p>
-        </div>
+        <div class="program-split">
+  <div class="section-head">
+    <span class="section-label">Recurring revenue / hotel value</span>
+    <h2>Hotel Flooring Preventive Maintenance Program</h2>
+    <p>
+      A monthly or scheduled program designed around occupancy, budgets, and brand standards so the hotel stays cleaner and more consistent year-round.
+    </p>
+  </div>
+
+  <div class="program-image">
+    <img src="/images/hotels/program-manager-hallway.png" alt="Hotel manager reviewing a tablet in a clean hallway">
+  </div>
+</div>
 
         <div class="grid-2">
           <div class="card">

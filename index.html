@@ -433,6 +433,43 @@
   flex-shrink:0;
   margin-right:8px; /* <-- tweak this */
 }
+.hero-split{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:20px;
+  margin-bottom:1.25rem;
+}
+
+.hero-split-copy{
+  max-width:760px;
+}
+
+.hero-split-copy .section-label{
+  margin-bottom:.6rem;
+}
+
+.hero-split h2{
+  margin:0 0 .65rem 0;
+  white-space:nowrap;
+}
+
+.hero-split-subhead{
+  margin:0;
+  max-width:760px;
+  font-size:1.02rem;
+  line-height:1.6;
+  color:var(--icc-gray);
+}
+
+.hero-split img{
+  width:260px;
+  height:auto;
+  border-radius:16px;
+  box-shadow:var(--shadow);
+  flex-shrink:0;
+  margin-right:8px;
+}
     .room-spotlight{
       display:grid;
       grid-template-columns: 1.15fr .85fr;
@@ -734,7 +771,13 @@
 <section id="why">
   <div class="container">
 <div class="hero-split">
-  <h2>An extension of your hotel team</h2>
+  <div class="hero-split-copy">
+    <span class="section-label">Hotel operations insight</span>
+    <h2>An extension of your hotel team</h2>
+    <p class="hero-split-subhead">
+      We understand the pressure of sold-out nights, guest scores, inspection readiness, and getting rooms back online fast.
+    </p>
+  </div>
 
   <img src="/images/hotels/room-cleaning-team.jpg" alt="Hotel cleaning team working together">
 </div>
